@@ -1,0 +1,17 @@
+{ 
+  "assetId":"837303000034",
+  "battery":100,
+  "cellSignal":29,
+  "cells":"510,10,1266,34084373",
+  "direction":0,
+  "expandInfo":"{\"acceleration\":\"x:1328;y:560;z:-592\",\"angle\":\"null\",\"backBattery\":\"null\",\"fuels\":\"-1,-1,-1\",\"humidity\":\"80\",\"lux\":\"2765.0\",\"networkType\":\"4\",\"posture\":\"x:1328;y:560;z:-592\",\"pressure\":\"null\",\"reportType\":\"null\",\"temperature\":\"27.0\"}",
+  "gnssSignal":8,
+  "gpsTime":"2024-12-09T04:53:53Z",
+  "latitude":-6.236985,
+  "locType":1,
+  "longitude":106.798804,
+  "mileage":0,
+  "recvTime":"2024-12-09T04:53:54.164866Z",
+  "speed":0,
+  "voltage":"4.16"
+}

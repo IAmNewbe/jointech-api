@@ -1,5 +1,10 @@
+const { sendToAntares } = require('./services/AntaresService');
 const { authenticateUser } = require('./services/AuthService');
-const { fetchAllDevices } = require('./services/DeviceService');
+const { fetchAllDevices, getSingleDevice } = require('./services/DeviceService');
+require('dotenv').config();
+
+const url = process.env.ANTARES_URL;
+const accessKey = process.env.ACCESS_KEY;
 
 async function runApp() {
     try {
@@ -12,8 +17,10 @@ async function runApp() {
         }
 
         if (authResponse.Result == 200) {
-            const allDevices = await fetchAllDevices();
-            console.log('Fetched all devices:', allDevices);
+            // const allDevices = await fetchAllDevices();
+            const SingleDevice = await getSingleDevice();
+            sendToAntares(url, accessKey, SingleDevice[0]);
+            // console.log('Fetched all devices:', SingleDevice);
         } else {
             console.error('Authentication failed with statuscode:', authResponse.statuscode);
         }
